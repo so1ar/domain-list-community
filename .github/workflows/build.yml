@@ -53,7 +53,7 @@ jobs:
           git config --local user.name "actions"
           git config --local user.email "action@github.com"
           git checkout -b release
-          git add *.txt dlc.dat dlc.dat.sha256sum dlc.dat.zip dlc.dat.zip.sha256sum dlc.dat.xz dlc.dat.xz.sha256sum
+          git add  dlc.dat dlc.dat.sha256sum dlc.dat.zip dlc.dat.zip.sha256sum dlc.dat.xz dlc.dat.xz.sha256sum
           git commit -m "${{ env.RELEASE_NAME }}"
           git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
           git push -f -u origin release
